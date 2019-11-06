@@ -1,8 +1,6 @@
 class ArticlesController < ApplicationController
-    def new
+    def show
+        @article = Article.fine(params[:id])
     end
     
-    def create
-        render plain: params[:article].inspect
-    end
 end
